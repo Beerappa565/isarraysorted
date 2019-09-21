@@ -1,0 +1,28 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+    public static boolean isarraysorted(int arr[],int i)
+    {
+        int n=arr.length;
+        if(n-1==i)
+        {
+            return true;
+        }
+        if(arr[i]>arr[i+1])
+        {
+            return false;
+        }
+        else
+        {
+      
+            boolean b=isarraysorted(arr,i+1);
+            return b;
+        }
+ }
+	public static void main (String[] args) {
+		int arr[]={1,2,0,3,4,5};
+        System.out.println(isarraysorted(arr,0));
+	}
+}
